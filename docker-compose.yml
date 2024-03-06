@@ -1,0 +1,12 @@
+version: '4'
+
+services:
+  bg1:
+    image: gzy1/bg_basic
+  bg2:
+    image: gzy1/bg_basic
+  bg3:
+    image: gzy1/bg_basic
+  bg4:
+    image: gzy1/bg_basic
+
