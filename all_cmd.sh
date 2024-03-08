@@ -43,11 +43,14 @@ cat /root/.ssh/id_rsa.pub
 
 ./finSet.sh
 
+#========================================================================
 
 docker exec -it 657c00d3bae3 bash
 docker exec -it 514a0e7d8c7c bash
 docker exec -it 33e6899e43ef bash
 docker exec -it 120827469e2d bash
+
+#========================================================================
 
 
 ./sshSet.sh
@@ -60,6 +63,8 @@ nano /etc/hosts
 172.21.0.5 node3
 172.21.0.2 node4
 
+
+#========================================================================
 
 nano /root/.ssh/authorized_keys
 
@@ -78,5 +83,4 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDyDq9fcIfnljDx9QMgUYvyFnY1L8LV1cOynpZ9bft3
 source /etc/profile
 jps
 
-cp /home/modules/hadoop-2.7.7 /home/modules/hadoop-2.8.3 -r
 

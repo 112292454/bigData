@@ -13,9 +13,10 @@ docker配置自强
 
 `docker compose up -d`
 
-开四个bash，进入四个容器，进入之后运行`source /etc/profile`
+开四个bash，进入四个容器(`docker ps `,then `docker exec --it xxxxx bash`)，
+进入之后运行`source /etc/profile`
 
-之后分别`./sshSet.sh`,按提示及原版文档操作（配sshkey，以及host文件）
+之后分别`./sshSet.sh`,按提示及原版文档操作（配sshkey，以及host文件）(基本上就是allCmd的最后面那样，挨个复制粘贴)
 
 最后分别运行`finSet.sh`
 
