@@ -10,7 +10,9 @@ mkdir -p /usr/lib/jvm/openlogic-openjdk-8u292-b10-linux-x64
 mv openlogic-openjdk-8u292-b10-linux-x64 /usr/lib/jvm/
 #mkdir -p /home/modules/hadoop-2.7.7
 #mv ./hadoop-2.7.7 /home/modules/
+mkdir /home/modules/hadoop-2.7.7/tmp/dfs/name -p
 chmod -R 777 /home/modules/hadoop-2.7.7
+
 
 echo "export JAVA_HOME=/usr/lib/jvm/openlogic-openjdk-8u292-b10-linux-x64/" >> /etc/profile
 echo "export JAVA_HOME=/usr/lib/jvm/openlogic-openjdk-8u292-b10-linux-x64/" >> /home/modules/hadoop-2.7.7/etc/hadoop/hadoop-env.sh
@@ -19,5 +21,6 @@ echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
 echo "export PATH=\$HADOOP_HOME/bin:\$HADOOP_HOME/sbin:\$PATH" >> /etc/profile
 echo "export HADOOP_CLASSPATH=/home/modules/hadoop-2.7.7/share/hadoop/tools/lib/*:\$HADOOP_CLASSPATH" >> /etc/profile
 echo "source /etc/profile" >>/root/.bashrc
+source /etc/profile
 apt install nano -y
 #java -version
